@@ -70,7 +70,7 @@ nav {
   position: fixed;
   width: 100%;
   background-color: rgba(var(--primary-background));
-  z-index: 99;
+  z-index: 98;
   top: 0;
   border-bottom: 1px solid #a6a6a63f;
   backdrop-filter: blur(10px);
@@ -284,12 +284,15 @@ nav {
 Section
 */
 .section {
-  height: 550px;
+    min-height: 550px;
+  /* ou auto */
+  height: auto;
   margin-top: 175px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
+  z-index: 1;
 }
 
 .section-title {
@@ -360,4 +363,117 @@ Section
   .card {
     flex: 1 1 100%;
   }
+}
+
+
+
+/* --- Section About --- */
+.about-section {
+  min-height: 550px;
+  height: auto;
+  margin-top: 175px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  z-index: 1;
+}
+
+.about-section .section-title {
+  text-align: center;
+}
+
+.about-section .section-title h2 {
+  font-size: 48px;
+}
+
+.about-section .section-title p {
+  font-size: 16px;
+}
+
+/* --- Grille des cartes --- */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 20px;
+}
+.about-paragraphe {
+  width: 55%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+/* --- Cartes individuelles --- */
+.about-card {
+  flex: 1 1 calc(25% - 20px);
+  background-color: var(--primary-background);
+  padding: 25px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  border: solid 2px #a6a6a63f;
+  transition-duration: 0.3s;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.about-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1330px) {
+  .about-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+  .about-paragraphe {
+    width: 80%;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-card {
+    flex: 1 1 100%;
+  }
+  .about-paragraphe {
+    width: 90%;
+  }
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+}
+.contact-card {
+  border: solid 1px #a6a6a63f;
+  border-radius: 5px;
+  width: 48px;
+  height: 48px;
+  margin-top: 35px;
+  transition-duration: 0.3s;
+}
+.contact-card:hover {
+  border: solid 1px var(--primary-color);
+}
+.contact-card svg {
+  fill: #a6a6a6;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  transition-duration: 0.3s;
+}
+.contact-card:hover svg {
+  fill: var(--primary-color);
 }
