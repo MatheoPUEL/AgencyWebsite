@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 🔥 SEO -->
+    <title>MatheoPUEL — Développeur Full-Stack & Créateur de Solutions Web</title>
+    <meta name="description" content="Développeur full-stack à Toulouse, spécialisé dans la création de sites web performants, applications modernes et solutions digitales sur mesure. Découvrez mes projets et services." />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Matheo Puel" />
+
+    <!-- 📣 OpenGraph (réseaux sociaux) -->
+    <meta property="og:title" content="MatheoPUEL — Développeur Full-Stack" />
+    <meta property="og:description" content="Création de solutions web modernes, performantes et centrées sur l'utilisateur." />
+    <meta property="og:image" content="./img/preview.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://matheopuel.fr" />
+
+    <!-- 🐦 Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./style/index.css" />
+
+</head>
+
+<body>
+
+    <!-- MODAL -->
+    <div class="modal display-none" id="modal" aria-hidden="true">
+        <div class="modal-content">
+            <h1 id="title"></h1>
+            <p id="content"></p>
+            <button class="close-modal" aria-label="Fermer la fenêtre" onclick="closeModal()">
+                <!-- SVG X complet -->
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="#000" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-logo">
+            <h1 style="font-size: 25px;">MatheoPUEL</h1>
+        </div>
+
+        <div class="nav-links" id="nav-links">
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#contact" class="nav-btn">Me contacter</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-toggle" id="nav-toggle" aria-label="Menu mobile">
+            ☰
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="header-container header-background" id="home">
+        <div class="hero-section">
+            <h1 class="title">
+                Construire des Solutions Web<br />
+                <span class="title-primary">Performantes & Modernes</span>
+            </h1>
+
+            <p class="header-description" style="text-align:center;">
+                Développeur full-stack spécialisé dans la création d’expériences digitales robustes et optimisées.
+            </p>
+
+            <a href="#expertise" class="btn-primary">
+                Voir mes projets
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12h14M13 5l7 7-7 7" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- EXPERTISE -->
+    <section class="section" id="expertise">
+        <div class="section-title">
+            <h2>Nos Expertises</h2>
+            <p>Nous proposons des solutions complètes couvrant chaque étape du développement.</p>
+        </div>
+
+        <div class="section-cards" style="margin-top: 70px">
+
+            <!-- DESIGN -->
+            <div class="card">
+                <div class="card-icon">
+                    <!-- SVG palette complet -->
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2a10 10 0 0 0 0 20h1.5a2.5 2.5 0 0 0 0-5H12a5 5 0 1 1 4.9-6h2.6A10 10 0 0 0 12 2Z"
+                            fill="#000" />
+                    </svg>
+                </div>
+                <h3>Design</h3>
+                <p>Conception d’interfaces élégantes et ergonomiques pour une expérience utilisateur optimale.</p>
+            </div>
+
+            <!-- DEV -->
+            <div class="card">
+                <div class="card-icon">
+                    <!-- SVG code complet -->
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                        <path d="M8 17L3 12l5-5m8 10l5-5-5-5" stroke="#000" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <h3>Développement</h3>
+                <p>Création d’applications modernes, rapides et fiables adaptées à chaque besoin.</p>
+            </div>
+
+            <!-- TESTS -->
+            <div class="card">
+                <div class="card-icon">
+                    <!-- SVG tests -->
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 3h14v4H5V3Zm0 6h14v12H5V9Z" stroke="#000" stroke-width="2" />
+                    </svg>
+                </div>
+                <h3>Tests</h3>
+                <p>Tests approfondis garantissant performance, stabilité et fiabilité du produit final.</p>
+            </div>
+
+            <!-- PRODUCTION -->
+            <div class="card">
+                <div class="card-icon">
+                    <!-- SVG server complet -->
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                        <rect x="3" y="3" width="18" height="6" stroke="#000" stroke-width="2" />
+                        <rect x="3" y="15" width="18" height="6" stroke="#000" stroke-width="2" />
+                    </svg>
+                </div>
+                <h3>Production</h3>
+                <p>Déploiement sécurisé et maintenance continue pour garantir la disponibilité.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="section-title">
+            <h2>À propos de moi</h2>
+            <p>Découvrez mon parcours, mes valeurs et mes projets actuels.</p>
+        </div>
+
+        <p class="about-paragraphe">
+            Je suis un étudiant en informatique et entrepreneur passionné par la création de solutions digitales ayant un impact concret. Ma curiosité pour le web m’a conduit à développer mes propres projets et à lancer mes activités.
+        </p>
+
+        <div class="about-container">
+
+            <!-- Status -->
+            <div class="about-card">
+                <svg width="50" height="50" viewBox="0 0 24 24"><path d="M4 3h16v4H4zM4 10h16v11H4z" fill="#000"/></svg>
+                <p>Status</p>
+                <h3>BTS SIO</h3>
+                <a class="href" onclick="ShowModal(studie)">En savoir plus</a>
+            </div>
+
+            <!-- Role -->
+            <div class="about-card">
+                <svg width="50" height="50" viewBox="0 0 24 24"><path d="M12 3a4 4 0 110 8 4 4 0 010-8zM4 21a8 8 0 0116 0H4z"/></svg>
+                <p>Rôle</p>
+                <h3>Entrepreneur & Développeur</h3>
+                <a class="href" onclick="ShowModal(role)">En savoir plus</a>
+            </div>
+
+            <!-- Localisation -->
+            <div class="about-card">
+                <svg width="50" height="50" viewBox="0 0 24 24"><path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z"/></svg>
+                <p>Localisation</p>
+                <h3>Toulouse – France</h3>
+                <a class="href" onclick="ShowModal(locatio)">En savoir plus</a>
+            </div>
+
+            <!-- Experience -->
+            <div class="about-card">
+                <svg width="50" height="50" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="#000" stroke-width="2"/></svg>
+                <p>Expérience</p>
+                <h3>5+ années</h3>
+                <a class="href" onclick="ShowModal(experience)">En savoir plus</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <div class="section-title" style="display:flex;flex-direction:column;align-items:center;">
+            <h2>Prêt à lancer un projet ?</h2>
+            <p>Contactez-moi pour échanger autour de vos besoins.</p>
+
+            <a class="btn-primary" style="width:150px;" href="./contact.html">Me contacter</a>
+
+            <div class="contact-container">
+
+                <!-- GitHub SVG complet -->
+                <a href="https://github.com/MatheoPUEL" target="_blank">
+                    <div class="contact-card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#000">
+                            <path
+                                d="M12 .5A12 12 0 0 0 0 12.6c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2c-3.3.7-4-1.4-4-1.4-.5-1.2-1.2-1.5-1.2-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1.1 1.6 1.1.9 1.6 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.4-5.3-6 0-1.2.4-2.2 1.1-3-.1-.2-.5-1.4.1-3 0 0 .9-.3 3 1.1a10.3 10.3 0 0 1 5.4 0c2.1-1.4 3-1.1 3-1.1.6 1.6.2 2.8.1 3 .7.8 1.1 1.8 1.1 3 0 4.6-2.7 5.7-5.3 6 .4.3.8 1 .8 2v3c0 .3.2.7.8.6A12.1 12.1 0 0 0 24 12.6 12 12 0 0 0 12 .5Z" />
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/matheo-puel-b21062332/" target="_blank">
+                    <div class="contact-card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#000">
+                            <path
+                                d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5Zm-.5 6.5h3V21h-3V10Zm7 0h2.9l.2 1.7h.1a3.8 3.8 0 0 1 3.4-2c3 0 4.3 2 4.3 5.4V21h-3v-6.1c0-2-.5-3.4-2.3-3.4a2.4 2.4 0 0 0-2.2 1.6c-.2.4-.2 1-.2 1.6V21h-3V10Z" />
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- Infogreffe -->
+                <a href="https://www.infogreffe.fr/entreprise/puel-matheo-francis-michel/942555400/" target="_blank">
+                    <div class="contact-card">
+                        <svg width="24" height="24" viewBox="0 0 500 500" fill="none" stroke="#000" stroke-width="30">
+                            <path d="M315 216v268c0 2-1 3-2 4s-3 2-4 2H211c-3 0-5-2-5-5V216c0-3 2-5 5-5h99c3 0 5 2 5 5Z" />
+                            <circle cx="261" cy="75" r="63" />
+                        </svg>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-card">
+                <h4>Entreprise</h4>
+                <ul>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#expertise">Nos services</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-card">
+                <h4>Aide</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Livraison</a></li>
+                    <li><a href="#">Retours</a></li>
+                    <li><a href="#">Statut</a></li>
+                    <li><a href="#">Paiement</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-card">
+                <h4>Mathéo</h4>
+                <ul>
+                    <li><a href="#">Moi</a></li>
+                    <li><a href="#">Lui</a></li>
+                    <li><a href="#">Nous</a></li>
+                    <li><a href="#">Elle</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-card">
+                <h4>Suivez-moi</h4>
+                <div class="social-links">
+
+                    <!-- Github + LinkedIn + Infogreffe repris -->
+                    (identiques à la section contact)
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> MatheoPUEL — Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="./script/navbar.js"></script>
+    <script src="./script/modal.js"></script>
+
+</body>
+
+</html>
