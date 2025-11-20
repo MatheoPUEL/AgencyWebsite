@@ -494,3 +494,14 @@ Section
     stroke: var(--primary-color);
     fill: none;
 }
+
+.contact-card .svg-info {
+    stroke: #a6a6a6;
+    fill: none;
+    transition-duration: 0.3s;
+}
+
+.contact-card:hover .svg-info {
+    stroke: var(--primary-color);
+    fill: none;
+}
